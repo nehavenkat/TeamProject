@@ -1,107 +1,298 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/CSS">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Spotify</title>
+
 </head>
 
 <body>
 
-    <div class="container" id="albumsPage">
-        <div class="container" id="artistPage">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2" id="sidebar">
+                <img src="logo.png" alt="" class="logo">
+                <ul>
+                    <li><i class="material-icons">
+                    home
+                    </i>Home</li>
+                    <li><i class="material-icons">
+                    search
+                    </i>Search</li>
+                    <li><i class="material-icons">
+                    list
+                </i>Your library</li>
+                </ul>
+            </div>
+            <div class="col-10" id="content">
+                <nav class="navbar navbar-expand-lg navbar-light ">
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link forcecolortextnavbar" href="#">TRENDING <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link forcecolortextnavbar" href="#">PODCASTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link forcecolortextnavbar" href="#">MOODS AND GENRES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link forcecolortextnavbar" href="#" tabindex="-1" aria-disabled="true">DISCOVER</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+   <div class="card-group">
+  <div class="card">
+    <img src="dummy2.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-white text-center">Card title</h5>
+      <p class="card-text text-white text-center">This is a wider card </p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="dummy2.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-white text-center">Card title</h5>
+      <p class="card-text text-white text-center">This is a wider card </p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="dummy2.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-white text-center">Card title</h5>
+      <p class="card-text text-white text-center">This is a wider card </p>
+    </div>
+  </div>
+       <div class="card">
+    <img src="dummy2.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-white text-center">Card title</h5>
+      <p class="card-text text-white text-center">This is a wider card </p>
+    </div>
+  </div>
+
+  
+</div>
+    <div class="card-group">
+  <div class="card">
+    <img src="dummy2.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-white text-center">Card title</h5>
+      <p class="card-text text-white text-center">This is a wider card </p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="dummy2.png" class="card-img-top" alt="...">
+    <div class="card-body">
+     <h5 class="card-title text-white text-center">Card title</h5>
+      <p class="card-text text-white text-center">This is a wider card </p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="dummy2.png" class="card-img-top" alt="...">
+    <div class="card-body">
+     <h5 class="card-title text-white text-center">Card title</h5>
+      <p class="card-text text-white text-center">This is a wider card </p>
+    </div>
+  </div>
+       <div class="card">
+    <img src="dummy2.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-white text-center">Card title</h5>
+      <p class="card-text text-white text-center">This is a wider card </p>
+    </div>
+  </div>
+
+  
+</div>
+  
+            </div>
+        </div>
+        <div class="container-fluid" style="padding-left: 0;padding-right: 0;">
+            <div class="row">
+                <div class="col-12" id="handler">
+                    <div class="row">
+                        <div class="col-3" id="controls-left">
+                            <div class="row">
+                                <div class="col-2"><img src="dummy.png" alt=""></div>
+                                <div class="col-10">
+                                    <div class="songtitle">Title Title Title</div>
+                                    <div class="songtitle">Artist</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div id="controls" class="text-center"><i class="material-icons">
+shuffle
+</i><i class="material-icons">
+skip_previous
+</i><i class="material-icons">
+play_circle_outline
+</i><i class="material-icons">
+skip_next
+</i>
+                      <i class="material-icons">
+repeat
+</i></div>
+                       
+                        <input type="range" class="form-control-range" id="formControlRange">
+                        </div>
+                        <div class="col-3"><div id="controls-right"><i class="material-icons">
+list
+</i><i class="material-icons">
+speaker_group
+</i><span><i class="material-icons">
+volume_up
+</i><input type="range" class="form-control-range" id="volume" ></span></div></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <script>
-        /// For the Album Page, use the https://deezerdevs-deezer.p.rapidapi.com/album/{id} API.
-        //You can get the album ID from the search API es.: json.data[0].album.id
 
-        function loadAlbum(searchAlbum) {
-            fetch("https://deezerdevs-deezer.p.rapidapi.com/search?limit=12&q=" + searchAlbum, {
-                "method": "GET",
-                "headers": {
-                    "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-                    "x-rapidapi-key": "90a4cce2e8msh71a30f294ae0070p198be9jsnb52964849910"
-                }
-            })
-                .then(response => response.json())
-                .then(albumsResponse => {
-                    console.log(albumsResponse);
-                    var div = `
-          <h3> ${searchAlbum}</h3>
-          <hr>
-          <div class ='row'>`
 
-                    let albumId = albumsResponse.data;
-                    albumId.forEach(albums => {
+    <!-- Side navigation -->
 
-                        div += `
-            <div class="col-sm-4 col-md-3 col-lg-1">
-            <img src= "${albums.album.cover}" />
-            <span>${albums.title}</span>
-            <span>${albums.id}</span>
+    <!--<div class="sidenav">
+        <a href="#">
+            <img src="https://www.iconsdb.com/icons/preview/white/spotify-xxl.png" alt="spotify logo">
+        </a>
+        <a href="#"><span class="glyphicon glyphicon-home"></span>  Home</a>
+        <a href="#"><span class="glyphicon glyphicon-search"></span>  Search</a>
+        <a href="#"><span class="glyphicon glyphicon-book"></span>  Your Library</a>
+        <button type="button" class="btn btn-light"> SIGN UP</button>
+        <button type="button" class="btn btn-dark"> LOGIN</button>
+        <footer>
+            <div class="row">
+                <span>
+                    <a href="#">Cookie</a>   
+                </span>
+                <span>|</span>
+                <span>
+                    <a href="#">Privacy</a>
+                </span>
+                <span>
+                    <a href="#">Policy</a>    
+                </span>
             </div>
-                  `
- document.querySelector("#albumsPage").innerHTML += div + "</div>"
-                    });
-                });
-                                    }
+        </footer>
+    </div>-->
 
-  // For the Artist page, use the https://deezerdevs-deezer.p.rapidapi.com/artist/{id} API
- // You can get the artist ID from the search API es.: json.data[0].artist.id                                  
-                                    
-function getArtistInfo (searchArtist){
-    fetch ("https://deezerdevs-deezer.p.rapidapi.com/search?limit=12&q="+ searchArtist , {
-        "method": "GET",
-        headers: {
-            "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-            "x-rapidapi-key": "b0f442ef2fmsh48d14fda6e39b49p1ce2f7jsnf2274d03026e"
-        }
-    }) 
-    .then(response => response.json())
-                .then(responseArtist => {
-                    console.log(responseArtist);
-                    var div = `
-          <h3> ${searchArtist}</h3>
-          <hr>
-          <div class ='row'>`
-
-                    let artistId = responseArtist.data;
-                    artistId.forEach(artists => {
-
-                        div += `
-            <div class="col-sm-4 col-md-3 col-lg-1">
-            <span>${artists.id}</span>
+    <!-- Page content -->
+    <!-- <div class="main">
+        <nav class="navbar navbar-expand-lg ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">TRENDING<span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#">PODCAST</a>
+                    <a class="nav-item nav-link" href="#">MOODS AND GENRES</a>
+                    <a class="nav-item nav-link" href="#">NEW RELEASES</a>
+                    <a class="nav-item nav-link" href="#">DISCOVER</a>
+                   
+                </div>
             </div>
-                  `
- document.querySelector("#artistPage").innerHTML += div + "</div>"
-                    });
-                });
-                                    }
+        </nav>-->
 
+    <!-- <div class="firstList">
+            <div class="row">
+                <h2 class="col-12">#THROWBACKTHURSDAY</h2>
+                <div class="card-deck">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://cdn.playlists.net/images/playlists/image/medium/1d85af96192ed7d500a48ca86f3a9caa.jpg" alt="Card image cap">
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://pl.scdn.co/images/pl/default/37965990ab6d97feac6c99214c532d397e9e0b32" alt="Card image cap">
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://i.scdn.co/image/ab67706f0000000270360cd384e89a266c8480a1" alt="Card image cap">
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://i.scdn.co/image/ab67706f000000025f4b625f7dfcb4733381bac3" alt="Card image cap">
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://pl.scdn.co/images/pl/default/000b52cf2592c2550e6df829ff12b21b8eade812" alt="Card image cap">
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://i.scdn.co/image/ab67706f00000002efc309cb3bb23e8654001612" alt="Card image cap">
+                </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="secondList">
+            <div class="row">
+                <h2 class="col-12">CLASSIFICATION</h2>
+                <div class="card-deck">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="data:image/jpeg;base64,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" alt="Card image cap">
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://charts-images.scdn.co/VIRAL_GLOBAL_DEFAULT.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://pl.scdn.co/images/pl/default/ae9e6b3e3d2a9f5a9c904e0966c0791f50f309d9" alt="Card image cap">
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://charts-images.scdn.co/REGIONAL_MY_DEFAULT.jpg" alt="Card image cap">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="musicPlayer fixed-bottom">
+            <div class="row">
+                <div class="musicButtons col-10" >
+                    <button type="button" >
+                        <span class="glyphicon glyphicon-random"></span>
+                    </button>
+                    <button>
+                        <span class="glyphicon glyphicon-step-backward"></span>
+                    </button>
+                    <button>
+                        <span class="glyphicon glyphicon-play"></span>
+                    </button>
+                    <button>
+                        <span class="glyphicon glyphicon-step-forward"></span>
+                    </button>
+                    <button>
+                        <span class="glyphicon glyphicon-repeat"></span>
+                    </button>
+                </div>
+                <div class="col-2">
+                    <button>
+                        <span class="glyphicon glyphicon-volume-up"></span>
+                    </button>
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                    </div>
+                </div>
+            </div>
+            <div class="musicBar">
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                    </div>
+            </div>
+        </div>
+    </div>-->
 
-</script>
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
 </body>
-
 </html>

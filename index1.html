@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container" id="albumsPage">
+        <div class="container" id="artistPage">
+        </div>
+    </div>
+    <script>
+        /// For the Album Page, use the https://deezerdevs-deezer.p.rapidapi.com/album/{id} API.
+        //You can get the album ID from the search API es.: json.data[0].album.id
+
+        function loadAlbum(searchAlbum) {
+            fetch("https://deezerdevs-deezer.p.rapidapi.com/search?limit=12&q=" + searchAlbum, {
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+                    "x-rapidapi-key": "90a4cce2e8msh71a30f294ae0070p198be9jsnb52964849910"
+                }
+            })
+                .then(response => response.json())
+                .then(albumsResponse => {
+                    console.log(albumsResponse);
+                    var div = `
+          <h3> ${searchAlbum}</h3>
+          <hr>
+          <div class ='row'>`
+
+                    let albumId = albumsResponse.data;
+                    albumId.forEach(albums => {
+
+                        div += `
+            <div class="col-sm-4 col-md-3 col-lg-1">
+            <img src= "${albums.album.cover}" />
+            <span>${albums.title}</span>
+            <span>${albums.id}</span>
+            </div>
+                  `
+ document.querySelector("#albumsPage").innerHTML += div + "</div>"
+                    });
+                });
+                                    }
+
+  // For the Artist page, use the https://deezerdevs-deezer.p.rapidapi.com/artist/{id} API
+ // You can get the artist ID from the search API es.: json.data[0].artist.id                                  
+                                    
+function getArtistInfo (searchArtist){
+    fetch ("https://deezerdevs-deezer.p.rapidapi.com/search?limit=12&q="+ searchArtist , {
+        "method": "GET",
+        headers: {
+            "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+            "x-rapidapi-key": "b0f442ef2fmsh48d14fda6e39b49p1ce2f7jsnf2274d03026e"
+        }
+    }) 
+    .then(response => response.json())
+                .then(responseArtist => {
+                    console.log(responseArtist);
+                    var div = `
+          <h3> ${searchArtist}</h3>
+          <hr>
+          <div class ='row'>`
+
+                    let artistId = responseArtist.data;
+                    artistId.forEach(artists => {
+
+                        div += `
+            <div class="col-sm-4 col-md-3 col-lg-1">
+            <span>${artists.id}</span>
+            </div>
+                  `
+ document.querySelector("#artistPage").innerHTML += div + "</div>"
+                    });
+                });
+                                    }
+
+
+</script>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
