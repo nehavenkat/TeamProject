@@ -1,29 +1,9 @@
-<!doctype html>
-<html lang="en">
 
-<head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-
-<body>
-
-    <div class="container" id="albumsPage">
-        <div class="container" id="artistPage">
-        </div>
-    </div>
-    <script>
         /// For the Album Page, use the https://deezerdevs-deezer.p.rapidapi.com/album/{id} API.
         //You can get the album ID from the search API es.: json.data[0].album.id
-
+        
         function loadAlbum(searchAlbum) {
-            fetch("https://deezerdevs-deezer.p.rapidapi.com/search?limit=12&q=" + searchAlbum, {
+            fetch("https://deezerdevs-deezer.p.rapidapi.com/search?limit=6&q=" + searchAlbum, {
                 "method": "GET",
                 "headers": {
                     "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
@@ -34,30 +14,30 @@
                 .then(albumsResponse => {
                     console.log(albumsResponse);
                     var div = `
-          <h3> ${searchAlbum}</h3>
-          <hr>
-          <div class ='row'>`
+                    <div class="row">`
 
                     let albumId = albumsResponse.data;
                     albumId.forEach(albums => {
 
                         div += `
-            <div class="col-sm-4 col-md-3 col-lg-1">
-            <img src= "${albums.album.cover}" />
-            <span>${albums.title}</span>
-            <span>${albums.id}</span>
-            </div>
-                  `
+                        <div class="card">
+    <img src="${albums.album.cover}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-white text-center">${albums.title}</h5>
+      <p class="card-text text-white text-center">${albums.id}</p>
+      </div>
+  </div>`
  document.querySelector("#albumsPage").innerHTML += div + "</div>"
                     });
                 });
                                     }
+                                
 
   // For the Artist page, use the https://deezerdevs-deezer.p.rapidapi.com/artist/{id} API
  // You can get the artist ID from the search API es.: json.data[0].artist.id                                  
                                     
 function getArtistInfo (searchArtist){
-    fetch ("https://deezerdevs-deezer.p.rapidapi.com/search?limit=12&q="+ searchArtist , {
+    fetch ("https://deezerdevs-deezer.p.rapidapi.com/search?limit=6&q="+ searchArtist , {
         "method": "GET",
         headers: {
             "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
@@ -86,22 +66,6 @@ function getArtistInfo (searchArtist){
                                     }
 
 
-</script>
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-</body>
-
-</html>
+ window.onload = () => {
+     loadAlbum("eminem");
+ }
